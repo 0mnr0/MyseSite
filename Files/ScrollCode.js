@@ -23,6 +23,7 @@ window.onload = function(){
 	let msgPreview = document.querySelector('.InformationBlock.Message.NotMine')
 
 	window.onscroll = function() {
+		document.getElementById('EnginePerson').textContent = (window.innerWidth / window.innerHeight)
 
 		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 		MiltiPlatformImg.style.top = MiltiPlatformDiv.offsetTop - window.scrollY+10+'px';
