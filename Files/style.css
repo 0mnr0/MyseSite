@@ -5,6 +5,11 @@ body{
 	overflow-x: hidden;
 }
 
+.fakebar {
+	width: fit-content !important;
+	top: -1200px !important;
+}
+
 body::-webkit-scrollbar {
   width: 12px; 
 }
@@ -63,7 +68,7 @@ debugoption {
 	margin-right: 17.5px;
 	padding: 10px; 
 	text-align: center;
-	transition: all .6s cubic-bezier(0.42, -0.45, 0.3, 1.46);
+	transition: all .6s cubic-bezier(0.3, -0.41, 0.33, 1.28);
 	border-radius: 15px;
 	background: #00000060;
 	color: white;
@@ -204,12 +209,26 @@ h5#EnginePerson{
     top: 0;
 	overflow: hidden;
     width: 100%;
-	transition: all 0.8s; 
+	transition: all 0.8s cubic-bezier(0.14, -0.01, 0.17, 0.99); 
     z-index: 1000;
 	opacity: 1;
 }
 .top-bar2.hidden {
     opacity: 0;
+}
+
+
+
+.top-bar.minified {
+	height: 40px;
+	background: #0b0b0b99;
+	padding: 5px;
+	border-start-end-radius: 20px;
+	border-end-end-radius: 20px;
+}
+
+.top-bar.minified .button {
+	border-radius: 20px;
 }
 
 
@@ -241,10 +260,11 @@ h5#EnginePerson{
 .button{
     display: inline-block;
     color: #fff;
+	transition: all .5s;
     text-decoration: none;
     background-color: #8f8f8f3d;
     border-radius: 12px;
-    margin-right: 10px;
+    margin-left: 10px;
 	border: solid #34c09d54 2px;
 	cursor: pointer;
 }
@@ -316,7 +336,7 @@ div#content2{
 	height: 200px;
 	right: -220px;
 	border-radius: 20px;
-	position: absolute;
+	position: fixed;
 }
 
 div#content4 {

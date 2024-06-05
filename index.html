@@ -10,14 +10,14 @@
 	}
 	</style>
 
+	<script src="Files/MoveToPos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 	<script src="Files/AnimatedBackground.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<script src="Files/MessagesPreview.js"></script>
-	<script src="Files/MoveToPos.js"></script>
-	<script src="Files/ScrollTitleBarVisibility.js"></script>
+	<script src="Files/ScrollCode.js"></script>
   </head>
   
   <body style="background: gray">
@@ -31,7 +31,13 @@
     <button onClick="ScrollToMain()" class="button">Главная</button>
     <button onClick="ScrollToChars()" class="button">О Движке</button>
     <button onClick="ScrollToBest()" class="button">Преимущества</button>
-    <!-- Добавьте нужное количество кнопок -->
+  </div>
+  
+  <div class="top-bar fakebar" id="FakeBar">
+    <font face="trebuchet MS" size="4" id="TitleNameBar"><b>Myse</b></font>
+    <button onClick="ScrollToMain()" class="button">Главная</button>
+    <button onClick="ScrollToChars()" class="button">О Движке</button>
+    <button onClick="ScrollToBest()" class="button">Преимущества</button>
   </div>
 
 
@@ -164,7 +170,34 @@
 			</div>
 		</div>
 		
+		<div class="InformationBlock Message Mine">
+			<div class="MessageFlexDiv">
+				<span class="MessageName">Случайный гигачад</span><br>
+				<span class="MessageText">Если эти сообщение есть и здесь, тогда почему игра есть только на Android? Ведь тут это уже реализовано... </span>
+			</div>
+			<img src="Files/homyachok.jpg" class="MessageAvatar"/>
+		</div>
+		
+		<div class="InformationBlock Message NotMine">
+			<img src="Files/DwayneJohnson.jpg" class="MessageAvatar"/>
+			<div class="MessageFlexDiv">
+				<span class="MessageName">Скала</span><br>
+				<span class="MessageText">Осталась пара нерешённых проблем. Например Myse может проигрывать любые сценарии, но как экспортировать их сюда - нет представленя</span>
+			</div>
+		</div>
+		
+		<div class="InformationBlock Message NotMine">
+			<img src="Files/DwayneJohnson.jpg" class="MessageAvatar"/>
+			<div class="MessageFlexDiv">
+				<span class="MessageName">Скала</span><br>
+				<span class="MessageText">Тем более перенос прогресса между Android, Wear OS и Web платформами будет не бесплатное. Это меня не устраивает</span>
+			</div>
+		</div>
+		
 	</div>
+	
+	
+	
 	<script>
 	window.scrollTo({
 		  left: 0,
@@ -172,5 +205,6 @@
 		  behavior: "smooth",
 		});
 	</script>
+	
  </body>
 </html>
