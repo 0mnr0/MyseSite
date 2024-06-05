@@ -21,6 +21,7 @@ window.onload = function(){
 	let Divs = document.querySelectorAll('.InformationBlock')
 	var MiltiPlatformDiv = document.getElementById("content2Inside");
 	let msgPreview = document.querySelector('.InformationBlock.Message.NotMine')
+	var video = document.querySelectorAll('.InformationBlock')[16]
 
 	window.onscroll = function() {
 		document.getElementById('EnginePerson').textContent = (window.innerWidth / window.innerHeight)
@@ -88,7 +89,7 @@ window.onload = function(){
 
 
 
-
+		console.log(video.offsetTop - video.clientHeight, scrollPosition)
 
 		
 

@@ -68,7 +68,7 @@ debugoption {
 	margin-right: 17.5px;
 	padding: 10px; 
 	text-align: center;
-	transition: all .6s cubic-bezier(0.3, -0.41, 0.33, 1.28);
+	transition: all .6s cubic-bezier(0.3, -0.41, 0.15, 0.99);
 	border-radius: 15px;
 	background: #00000060;
 	color: white;
@@ -94,6 +94,30 @@ debugoption {
 	border-radius: 25px;
 	border: solid 2px white;
 	margin: 0 auto; 
+}
+
+.InformationBlock.Message.VideoMessage video{
+	width: 100%;
+	border-radius: 15px;
+}
+
+
+.InformationBlock.Message.ImageMessage .image{
+	width: 100%;
+	border-radius: 15px;
+}
+
+
+.InformationBlock.Message.ImageMessage .MessageName,  .InformationBlock.Message.VideoMessage .MessageName{
+	position: absolute;
+	margin-left: 5px;
+}
+
+.InformationBlock.Message.AuthorText {
+	color: #d3d3d3;
+	text-align: center;
+	width: 100%;
+	display: block
 }
 
 .InformationBlock.Message {
