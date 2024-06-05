@@ -1,0 +1,326 @@
+body{
+	background-color: #000000;
+    padding: 0px;
+    margin: 0px;
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; 
+}
+body::-webkit-scrollbar-track {
+  padding: 3px;
+  background: #222222;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  margin: 2px;
+  border: solid 3px #222222;
+  border-radius: 20px;
+}
+
+body * {
+	scroll-behavior: smooth;
+	font-family: "Montserrat", sans-serif;
+}
+ 
+ 
+body::-webkit-scrollbar {
+    /* display: none; */
+}
+
+
+div#content-border {
+	padding-bottom: 100px
+}
+div#overlay{
+	
+	padding-bottom: 10px
+}
+
+#gradient
+{
+  transition: all .1s;
+  width: 100%;
+  height: inherit;
+  padding: 0px;
+  margin: 0px;
+}
+
+#TitleMainText{
+	font-size: large;
+}
+ 
+debugoption {
+	border: solid red 1px !important;
+}
+
+.InfoTitle {font-weight: 600; font-size: larger}
+
+.InformationBlock {
+	margin: 10px;
+	margin-left: 17.5px;
+	margin-right: 17.5px;
+	padding: 10px; 
+	text-align: center;
+	transition: all .6s cubic-bezier(0.42, -0.45, 0.3, 1.46);
+	border-radius: 15px;
+	background: #00000060;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.MessagesBox {margin-top: 120px}
+
+.InfoText {
+	margin-top: 10px;
+	display: block
+}
+
+.MessageAvatar {
+	border-radius: 15px;
+}
+
+
+.InformationBlock.Message {
+	display: flex;
+	max-width: 630px;
+	position: relative;
+	border-radius: 25px;
+	border: solid 2px white;
+	margin: 0 auto; 
+}
+
+.InformationBlock.Message {
+	margin-bottom: 22px
+}
+
+.InformationBlock.Message img {
+	object-fit: cover
+}
+
+.InformationBlock.Message.Mine {
+	text-align: right;
+	border-end-end-radius: 8px;
+}
+
+.InformationBlock.Message.NotMine .MessageFlexDiv *{
+	text-align: left;
+	float: left
+}
+
+.InformationBlock.Message.NotMine {
+	text-align: right;
+	border-end-start-radius: 8px;
+}
+
+.MessageName {
+	font-weight: 600;
+	font-size: larger
+}
+
+.InformationBlock.Message.Mine .MessageName, .InformationBlock.Message.Mine .MessageFlexDiv{
+	width: 100%;
+}
+
+.InformationBlock.Message.Mine .MessageFlexDiv *{
+	text-align: right;
+	float: right
+}
+
+.InformationBlock.Message.Mine img {
+	margin-left: 12px;
+	max-height: 100px;
+	float: right;
+	position: sticky;
+	left: 100%;
+	border-end-end-radius: 4px
+}
+
+.InformationBlock.Message.NotMine img {
+	margin-right: 12px;
+	max-height: 100px;
+	border-end-start-radius: 4px
+}
+
+#TitleNameMain{
+	color: white;
+	top: 45%;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+ #TitleNameBar{
+    display: inline;
+    padding-left: 50px;
+	padding-right: 50px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+	
+}
+img#EngineImage{
+	width: 60px;
+	height: 60px;
+	left: 12px;
+	margin-top: 45px;
+	position: absolute;
+	border-radius: 10px;
+	
+}
+
+h5#EnginePerson{
+	position: absolute;
+    top: 37px;
+    color: white;
+    left: 78px;
+}
+
+#EngineText{
+	margin-top: 15px;
+	font-family: cursive;
+	position: absolute;
+	color: white;
+	left: 77px;
+	top: 50px;
+	background: gray;
+	white-space: nowrap;
+	border: solid #2a2b45 2px;
+	padding: 6px;
+	overflow: hidden;
+	transition: all 0.3s;
+	border-start-start-radius: 15px;
+	border-start-end-radius: 15px;
+	border-end-end-radius: 15px;
+	
+}
+ 
+.top-bar2 {
+    padding-left: 15px;
+	padding-top: 8px;
+    position: fixed;
+	color: white;
+    top: 0;
+	overflow: hidden;
+    width: 100%;
+	transition: all 0.8s; 
+    z-index: 1000;
+	opacity: 1;
+}
+.top-bar2.hidden {
+    opacity: 0;
+}
+
+
+.top-bar {
+    background-color: #0b0b0bdb;
+	margin-top:0px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+	white-space: nowrap;
+	height: 50px;
+	overflow: hidden;
+    width: 100%;
+	transition: all 0.8s; 
+	cursor: default;
+    z-index: 1000;
+}
+.top-bar.invisiblebar {
+    background-color: #0b0b0b5c;
+    padding: 10px;
+	margin-top:-70px;
+    position: fixed;
+	overflow: hidden;	
+    top: 0;
+	transition: all 0.8s; 
+    z-index: 1000;
+}
+
+.button{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background-color: #8f8f8f3d;
+    border-radius: 12px;
+    margin-right: 10px;
+	border: solid #34c09d54 2px;
+	cursor: pointer;
+}
+
+.content1{
+	color: white;
+	font: 1.2rem "trebuchet MS", sans-serif;
+	margin-bottom: 100px;
+	display: flex
+}
+
+#content1Inside {
+	left: 15.5px;
+	position: relative;
+	opacity: 0;
+	transition: opacity .5s;
+	max-width: 60%;
+}
+
+#content3Inside {
+	left: 15.5px;
+	position: relative;
+	opacity: 0;
+	transition: opacity .5s;
+	max-width: 60%;
+}
+
+
+div#content2{
+	color: white;
+	direction: rtl;
+	font: 1.2rem "trebuchet MS", sans-serif;
+}
+
+#content2Inside * {
+	text-align: right;
+	
+}
+
+#content2Inside {
+	text-align: right;
+	float: right;
+	position: relative;
+	opacity: 0;
+	transition: opacity .5s;
+	max-width: 70%;
+	
+}
+
+#MyseLogoFirst{
+	width: 200px;
+	height: 200px;
+	left: -220px;
+	border-radius: 20px;
+	position: absolute;
+}
+
+#OpenSourceImg{
+	width: 200px;
+	height: 200px;
+	left: -220px;
+	border-radius: 20px;
+	position: absolute;
+}
+
+
+#MultiPlatformImg{
+	width: 200px;
+	height: 200px;
+	right: -220px;
+	border-radius: 20px;
+	position: absolute;
+}
+
+div#content4 {
+    color: white;
+    direction: rtl;
+    font: 1.2rem "trebuchet MS", sans-serif;
+}

@@ -1,0 +1,176 @@
+<html>
+  <head>
+  <link href="Files/bootstrap.css" rel="stylesheet">
+    <title>Myse</title>
+	<link rel="stylesheet" href="Files/style.css">
+
+    <style id="ScrollStyle">
+	body::-webkit-scrollbar-thumb {
+		background-color: purple;
+	}
+	</style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script src="Files/AnimatedBackground.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<script src="Files/MessagesPreview.js"></script>
+	<script src="Files/MoveToPos.js"></script>
+	<script src="Files/ScrollTitleBarVisibility.js"></script>
+  </head>
+  
+  <body style="background: gray">
+  
+
+  
+  <b><font face="trebuchet MS" size="5" class="top-bar2" id="topBarMyse" id="TitleNameBarHidden">Myse</font></b>
+  
+  <div class="top-bar invisiblebar" id="top-bar-line">
+    <font face="trebuchet MS" size="4" id="TitleNameBar"><b>Myse</b></font>
+    <button onClick="ScrollToMain()" class="button">Главная</button>
+    <button onClick="ScrollToChars()" class="button">О Движке</button>
+    <button onClick="ScrollToBest()" class="button">Преимущества</button>
+    <!-- Добавьте нужное количество кнопок -->
+  </div>
+
+
+    <div id="gradient">
+		<div id="overlay" style="background: #0b0b0b25; width: 100%; height: inherit; display: flow; transition: all 1s"/>
+		<div id="titleName">
+		
+			<p id="EngineText"><font face="trebuchet MS" > </font></p>
+			<img src="Files/DwayneJohnson.jpg" style="" id="EngineImage"/>
+			<h5 id="EnginePerson">Dwayne Johnson</h5>
+	
+			<h1 id="TitleNameMain"><font face="trebuchet MS" size="20">Myse</font>
+			<b><p id="TitleMainText">Начните листать вниз чтобы узнать больше ↓</P></b>
+			</h1>
+			
+	
+			<table style="width="100%" height="100%"><tr><td vertical-align="middle"></td></tr></table>
+			
+			
+		</div>
+		
+		
+		<div id="content-border"/>
+	 
+
+		
+		<div id="content1" class="content1">
+			<img src="Files/MyseLogo1.png" id="MyseLogoFirst">
+			<div id="content1Inside">
+				<h1>Движок не требующий кода</h1>
+				<span>Myse представляет собой два инструмента: <b>MyseEngine</b> и <b>MyseWriter</b></span><br/><br/>
+				<span><b> - MyseEngine</b> представляет собой заранее заготовленый движок который готовый к работе. Для того чтобы начать игру на всех доступных платформах - нажмите кнопку в MyseWriter</span><br/>
+				<span><b> - MyseWriter</b> представляет собой программу которая позволяет писать саму новеллу. Выбирайте опции для своей истории и смотрите результат на любой платформе</span>
+			
+			</div>
+		</div>
+		
+		<div id="content2" class="content1">
+			<img src="Files/Multipatform.png" id="MultiPlatformImg">
+			<div id="content2Inside">
+				<h1>Играть как угодно</h1>
+				<span>:Myse может работать сразу с тремя платформами<br/><br/>
+				<span><b>Смартфон</b> является оптимальным вариантом. Но Myse умеет переносить игровые данные на следующие платформы</span><br/>
+				<span><b>Смарт-часы</b> - самый простой процесс игры. Там не будет лишних деталей и будут отключены мало-важные функции игры</span><br/>
+				<span><b>ПК или Web</b> (создание не начато). Возможно, будет иметь самый "приятный" игровой процесс за счёт анимаций</span>
+			
+			</div>
+			
+		</div>
+		
+		<div id="content3" class="content1">
+			<img src="Files/OpenSource.png" id="OpenSourceImg">
+			<div id="content3Inside">
+				<h1>Открытый исходный код</h1>
+				<span>Хотите добавить уникальную фишку в вашу игру?<br/><br/>
+				<span>У Myse всегда будет <b>Открытый код</b>, поэтому с безопасностью и идеями никогда не возникнет проблем</span><br/>
+				<span>Вы всегда можете узнать как работает движок или поменять его если хотите сделать игру уникальной</span><br/>
+			
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<div class="InformationBlock">
+		<span class="InfoTitle">Описание движка</span><br>
+		<span class="InfoText"> Myse - игровой движок который создан примущественно для платформы Android. Он позволяет с помощью всего одной программы для ПК создавать игры жанра визуальные новеллы</span>
+		</span>
+	</div>	
+	<div class="InformationBlock">
+		<span class="InfoTitle">Без кода!</span><br>
+		<span class="InfoText">Myse не требует кода что уже делает его простым движком для разработки своей игры.<br>
+Для обеспечения простой и понятной реализации написании игры, был выбран подход «простоты».<br>Есть специальная программа в которой всё заранее подготовлено, автору игры нужно просто выбрать действие, например,<br>вывести текст за главного героя, написать сам текст, выбрать изображение героя и сохранить действие.
+		</span>
+	</div>
+	<div class="InformationBlock">
+		<span class="InfoTitle">Востребованность</span><br>
+		<span class="InfoText">Перед реализацией я ознакомился с существующими реализациями подобного проекта в той же среде, и должен сказать, движков для реализации новелл не так уж и много:<br>
+<br>
+<b>RenPy</b> - бесплатный, свободный и открытый движок для создания визуальных романов (графических квестов с диалоговой системой) в 2D-графике. Самый популярный пример – бесконечное лето<br><br>
+<b>Unity</b> –бесплатный, свободный и открытый движок для создания любых типов игр, включая новеллы. Примеров много, один из них - Along the Edge<br>
+</span>
+	</div>
+
+	<div class="InformationBlock">
+		<span class="InfoTitle">Игра где угодно!</span><br>
+		<span class="InfoText">Что делает движок еще более интересным, так это мультиплатформенность.<br><br>
+
+Игра может быть рядом где угодно, игровой процесс будет продолжаться на запястье без потери прогресса, потому что игра работает на Смарт-часах. <br>
+Игровой процесс на часах можно настроить! Все настройки для смарт-часов устанавливаются с телефона. Конечно, не так гибко как на телефоне, но всё же можно :)
+
+		</span>
+	</div>
+	<div class="InformationBlock">
+		<span class="InfoTitle">Так-же Myse поможет: </span><br>
+		<span class="InfoText"><b>Сделать простые новеллы:</b> Авторы смогут создавать свои игры без знаний в коде, распространять свою игру где и как угодно, обновлять и модифицировать её</span>
+	</div>
+	<div class="InformationBlock">
+		<span class="InfoTitle">Так-же Myse поможет: </span><br>
+		<span class="InfoText"><b>Ввести новичков в создание игр:</b> Тот кто ни разу не делал игры может понять как примерно работают движки, хоть Myse и не даст возможность писать свой код, но для создания хорошей новеллы его хватит.</span>
+	</div>
+	<div class="InformationBlock">
+		<span class="InfoTitle">Так-же Myse поможет: </span><br>
+		<span class="InfoText"><b>Просто создать новеллу:</b> Myse может подойти тем людям которым больше и не нужно – не надо кодить, не надо собирать проект, написал сценарий – игра готова!</span>
+	</div>
+	
+	<div class="MessagesBox">
+	
+		<div class="InformationBlock Message NotMine">
+			<img src="Files/DwayneJohnson.jpg" class="MessageAvatar"/>
+			<div class="MessageFlexDiv">
+				<span class="MessageName">Дуэйн Джонсон</span><br>
+				<span class="MessageText">Привет! Это Дуйэн Джонсон. Я так-же известен как Скала. Я написал это сообщение не просто так :D</span>
+			</div>
+		</div>
+		
+		<div class="InformationBlock Message Mine">
+			<div class="MessageFlexDiv">
+				<span class="MessageName">Случайный гигачад</span><br>
+				<span class="MessageText">Да? Ну и зачем же ты здесь?</span>
+			</div>
+			<img src="Files/homyachok.jpg" class="MessageAvatar"/>
+		</div>
+		
+		<div class="InformationBlock Message NotMine">
+			<img src="Files/DwayneJohnson.jpg" class="MessageAvatar"/>
+			<div class="MessageFlexDiv">
+				<span class="MessageName">Скала</span><br>
+				<span class="MessageText">Показать тебе примерно то как выглядит Myse. Эти сообщения очень похожи на те, что используются в основном движке</span>
+			</div>
+		</div>
+		
+	</div>
+	<script>
+	window.scrollTo({
+		  left: 0,
+		  top: window.scrollY,
+		  behavior: "smooth",
+		});
+	</script>
+ </body>
+</html>
