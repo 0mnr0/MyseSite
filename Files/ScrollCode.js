@@ -2,6 +2,10 @@
 
 window.onload = function(){
 
+	if ((window.innerWidth / window.innerHeight) < 0.6){
+		document.getElementById('BadRatio').style.display = 'block'
+	} else {document.getElementById('BadRatio').style.display = 'none'}
+
 	var title = document.getElementById("top-bar-line");
 	var fakebar = document.getElementById("FakeBar");
 	let fakebarWidth = fakebar.clientWidth;
@@ -15,12 +19,13 @@ window.onload = function(){
 	var OpenSource = document.getElementById("OpenSourceImg");
 	var Content3 = document.getElementById("content3Inside");
 	let Divs = document.querySelectorAll('.InformationBlock')
+	var MiltiPlatformDiv = document.getElementById("content2Inside");
+	let msgPreview = document.querySelector('.InformationBlock.Message.NotMine')
 
 	window.onscroll = function() {
 
 		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-		var MiltiPlatformDiv = document.getElementById("content2Inside");
-		MiltiPlatformImg.style.top = (MiltiPlatformDiv.offsetTop - window.scrollY+10)+'px';
+		MiltiPlatformImg.style.top = MiltiPlatformDiv.offsetTop - window.scrollY+10+'px';
 
 		if (scrollPosition < (BigMainText.offsetTop/2)+130) {
 			TitleMark.classList.remove('hidden');
@@ -29,7 +34,6 @@ window.onload = function(){
 			title.classList.add('invisiblebar');
 			overlay.style.background="#0b0b0b25";
 		} else {
-			let msgPreview = document.querySelector('.InformationBlock.Message.NotMine')
 			let visivbilityPercent = 60;
 			if (scrollPosition > msgPreview.offsetHeight + msgPreview.offsetTop-250){
 				visivbilityPercent='bb';
@@ -110,7 +114,11 @@ window.onload = function(){
 		
 	};
 	  
-	window.onresize = function(){
-		window.onscroll()
-	}
+
+}
+window.onresize = function(){
+	if ((window.innerWidth / window.innerHeight) < 0.6){
+		document.getElementById('BadRatio').style.display = 'block'
+	} else {document.getElementById('BadRatio').style.display = 'none'}
+	window.onscroll()
 }
