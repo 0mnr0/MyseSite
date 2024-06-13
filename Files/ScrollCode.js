@@ -1,11 +1,15 @@
 
 
-window.onload = function(){
+function MouseUpped(){
+	document.getElementById('overlay').classList.remove('CatPop')
+}
 
-	if ((window.innerWidth / window.innerHeight) < 0.6){
-		document.getElementById('BadRatio').style.display = 'block'
-	} else {document.getElementById('BadRatio').style.display = 'none'}
 
+function MouseDown(){
+	if (document.getElementById('overlay').classList.length === 0) { document.getElementById('overlay').classList.add('CatPop') }
+}
+
+function ScrollCode(){
 	var title = document.getElementById("top-bar-line");
 	var fakebar = document.getElementById("FakeBar");
 	let fakebarWidth = fakebar.clientWidth;
@@ -22,26 +26,26 @@ window.onload = function(){
 	var MiltiPlatformDiv = document.getElementById("content2Inside");
 	let msgPreview = document.querySelector('.InformationBlock.Message.NotMine')
 	var video = document.querySelectorAll('.InformationBlock')[16]
+	let previousScroll = 0;
 
-	window.onscroll = function() {
-		document.getElementById('EnginePerson').textContent = (window.innerWidth / window.innerHeight)
+		let screenHeight = window.innerHeight+30;
 
 		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 		MiltiPlatformImg.style.top = MiltiPlatformDiv.offsetTop - window.scrollY+10+'px';
+		let scrollingDown = previousScroll < scrollPosition;
 
 		if (scrollPosition < (BigMainText.offsetTop/2)+130) {
 			TitleMark.classList.remove('hidden');
 			title.style.visibility = "hidden";
-			
 			title.classList.add('invisiblebar');
 			overlay.style.background="#0b0b0b25";
 		} else {
 			let visivbilityPercent = 60;
-			if (scrollPosition > msgPreview.offsetHeight + msgPreview.offsetTop-250){
+			if (scrollPosition > msgPreview.offsetTop - (screenHeight /1.7)){
 				visivbilityPercent='bb';
 				fakebar.classList.add("minified");
 				title.classList.add("minified");
-				title.style.width=fakebarWidth-8+'px';
+				title.style.width=fakebarWidth+'px';
 			} else {
 				fakebar.classList.remove("minified");
 				title.classList.remove("minified");
@@ -88,32 +92,54 @@ window.onload = function(){
 
 
 
-
-		console.log(video.offsetTop - video.clientHeight, scrollPosition)
-
 		
-
-		
-		let screenHeight = window.innerHeight;
 		
 		let heights = Array(Divs.length).fill(0)
 		for (let i = 0; i < Divs.length; i++){
 			heights[i] = Divs[i].offsetHeight + Divs[i].offsetTop
 		}
 		for (let i = 0; i < heights.length; i++){
-			if (heights[i] < scrollPosition || (heights[i]-Divs[i].offsetHeight) > screenHeight+scrollPosition){
+			//
+			if ((heights[i]-Divs[i].offsetHeight) > screenHeight+scrollPosition){
+				// Блоки которые ниже поле зрения 
 				Divs[i].style.opacity = "0.4"
 				Divs[i].style.scale = "0.93"
 				Divs[i].style.filter = "blur(1px)"
-				Divs[i].style.marginTop = "30px"
+				
+				Divs[i].style.paddingTop = "40px"
+				Divs[i].style.paddingBottom = "0px"
 			} else {
-				Divs[i].style.filter = "blur(0px)"
-				Divs[i].style.opacity = "1"
-				Divs[i].style.scale = "1"
-				Divs[i].style.marginTop = "0px"
+				if (heights[i] < scrollPosition){
+					// Блоки которые выше поле зрения
+					Divs[i].style.opacity = "0.4"
+					Divs[i].style.scale = "0.94"
+					Divs[i].style.filter = "blur(1px)"
+				} else {
+					//Блоки которые в поле зрения
+					Divs[i].style.filter = "blur(0px)"
+					Divs[i].style.opacity = "1"
+					Divs[i].style.scale = "1"
+					Divs[i].style.paddingTop = "10px"
+					Divs[i].style.paddingBottom = "10px"
+				}
 			}
 		}
 		
+		previousScroll = scrollPosition
+		
+}
+
+
+window.onload = function(){
+
+	if ((window.innerWidth / window.innerHeight) < 0.6){
+		document.getElementById('BadRatio').style.display = 'block'
+	} else {document.getElementById('BadRatio').style.display = 'none'}
+
+
+
+	window.onscroll = function() {
+		ScrollCode()
 	};
 	  
 
@@ -124,3 +150,5 @@ window.onresize = function(){
 	} else {document.getElementById('BadRatio').style.display = 'none'}
 	window.onscroll()
 }
+
+ScrollCode()

@@ -17,7 +17,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<script src="Files/MessagesPreview.js"></script>
-	<script src="Files/ScrollCode.js"></script>
   </head>
   
   <body style="background: gray">
@@ -42,7 +41,7 @@
 
 
     <div id="gradient">
-		<div id="overlay" style="background: #0b0b0b25; width: 100%; height: inherit; display: flow; transition: all 1s"/>
+		<div id="overlay" onmouseup="MouseUpped()" onmousedown="MouseDown()" style="background: #0b0b0b25; width: 100%; height: inherit; display: flow; transition: all 1s"/>
 		<div id="titleName">
 		
 			<p id="EngineText"><font face="trebuchet MS" > </font></p>
@@ -234,5 +233,6 @@
 		});
 	</script>
 	
+	<script src="Files/ScrollCode.js"></script>
  </body>
 </html>

@@ -5,9 +5,10 @@ body{
 	overflow-x: hidden;
 }
 
-.fakebar {
+.top-bar.fakebar {
 	width: fit-content !important;
 	top: -1200px !important;
+	transition: none !important;
 }
 
 body::-webkit-scrollbar {
@@ -68,7 +69,7 @@ debugoption {
 	margin-right: 17.5px;
 	padding: 10px; 
 	text-align: center;
-	transition: all .6s cubic-bezier(0.3, -0.41, 0.15, 0.99);
+	transition: all .5s cubic-bezier(0.19, 0.11, 0.33, 1);
 	border-radius: 15px;
 	background: #00000060;
 	color: white;
@@ -131,6 +132,14 @@ debugoption {
 .InformationBlock.Message.Mine {
 	text-align: right;
 	border-end-end-radius: 8px;
+}
+
+#overlay {
+	cursor: url("cursor.png"), auto;
+}
+
+#overlay.CatPop {
+	cursor: url("cursor_pop.png"), auto;
 }
 
 .InformationBlock.Message.NotMine .MessageFlexDiv *{
@@ -240,6 +249,8 @@ h5#EnginePerson{
 .top-bar2.hidden {
     opacity: 0;
 }
+
+
 
 
 
