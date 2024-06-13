@@ -8,10 +8,10 @@ var SongTexts=[
 ];
 
 var Widths=[
-	315,
-	250,
+	335,
+	260,
 	320,
-	235
+	255
 ]
 
 var WaitTime=[
