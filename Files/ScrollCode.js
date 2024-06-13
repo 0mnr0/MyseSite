@@ -1,3 +1,4 @@
+let isMobile = /Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)
 
 
 function MouseUpped(){
@@ -19,6 +20,7 @@ function ScrollCode(){
 	var Content1 = document.getElementById("content1Inside");
 	var MiltiPlatformImg = document.getElementById("MultiPlatformImg");
 	var Content2 = document.getElementById("content2Inside");	
+	document.getElementById('EnginePerson').textContent = isMobile
 	var BigMainText = document.getElementById("TitleMainText");
 	var OpenSource = document.getElementById("OpenSourceImg");
 	var Content3 = document.getElementById("content3Inside");
@@ -134,6 +136,7 @@ window.onload = function(){
 
 	if ((window.innerWidth / window.innerHeight) < 0.6){
 		document.getElementById('BadRatio').style.display = 'block'
+		document.getElementById('content2').className = 'content1 mobileDiv'
 	} else {document.getElementById('BadRatio').style.display = 'none'}
 
 

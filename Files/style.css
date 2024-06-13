@@ -11,6 +11,11 @@ body{
 	transition: none !important;
 }
 
+
+#content2.content1.mobileDiv img {
+	display: none
+}
+
 body::-webkit-scrollbar {
   width: 12px; 
 }
