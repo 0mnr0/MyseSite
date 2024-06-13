@@ -20,7 +20,6 @@ function ScrollCode(){
 	var Content1 = document.getElementById("content1Inside");
 	var MiltiPlatformImg = document.getElementById("MultiPlatformImg");
 	var Content2 = document.getElementById("content2Inside");	
-	document.getElementById('EnginePerson').textContent = isMobile
 	var BigMainText = document.getElementById("TitleMainText");
 	var OpenSource = document.getElementById("OpenSourceImg");
 	var Content3 = document.getElementById("content3Inside");
