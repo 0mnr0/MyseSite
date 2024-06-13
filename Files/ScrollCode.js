@@ -107,7 +107,7 @@ function ScrollCode(){
 				Divs[i].style.scale = "0.93"
 				Divs[i].style.filter = "blur(1px)"
 				
-				Divs[i].style.paddingTop = "40px"
+				Divs[i].style.paddingTop = "50px"
 				Divs[i].style.paddingBottom = "0px"
 			} else {
 				if (heights[i] < scrollPosition){
@@ -135,8 +135,11 @@ window.onload = function(){
 
 	if ((window.innerWidth / window.innerHeight) < 0.6){
 		document.getElementById('BadRatio').style.display = 'block'
-		document.getElementById('content2').className = 'content1 mobileDiv'
 	} else {document.getElementById('BadRatio').style.display = 'none'}
+	
+	if (isMobile){
+		document.getElementById('MultiPlatformImg')
+	}
 
 
 
@@ -154,3 +157,4 @@ window.onresize = function(){
 }
 
 ScrollCode()
+setTimeout(function(){ScrollCode()}, 300)
