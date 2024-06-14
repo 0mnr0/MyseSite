@@ -341,8 +341,6 @@ h5#EnginePerson{
 
 
 div#content2{
-	-webkit-overflow-scrolling: auto;
-	overflow-y: scroll;
 	color: white;
 	direction: rtl;
 	font: 1.2rem "trebuchet MS", sans-serif;
