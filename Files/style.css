@@ -352,7 +352,11 @@ div#content2{
 
 #content2Inside * {
 	text-align: right;
-	
+}
+
+.InformationBlock.Message.GitHubLinks {
+	display: flex !important;
+	flex-direction: column;
 }
 
 #content2Inside {
