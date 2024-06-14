@@ -331,6 +331,10 @@ h5#EnginePerson{
 	max-width: 60%;
 }
 
+img#MultiPlatformImg.MobileView {
+	opacity: 0
+}
+
 #content3Inside {
 	left: 15.5px;
 	position: relative;

@@ -138,7 +138,7 @@ window.onload = function(){
 	} else {document.getElementById('BadRatio').style.display = 'none'}
 	
 	if (isMobile){
-		document.getElementById('MultiPlatformImg')
+		document.getElementById('MultiPlatformImg').className = 'MobileView'
 	}
 
 
